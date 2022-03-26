@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-family: 'open sans';
+    font-weight: 300;
+}
+body{
+    overflow: auto;
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-self: center;
+}
+.bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background-color: rgba(35, 196, 218);
+}
+.bg::after{
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0,0, 0,0.7);
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+h4{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: 10px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    position: relative;
+}
+.container h4 span{
+    margin-right: 50px;
+    display: inline-block;
+}
+#line{
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    height: 15px;
+    width: 162.25px;
+    border: 5px solid rgba(255, 255, 0, 0.37);
+    pointer-events: none;
+    z-index: -1;
+    transition: .5s ease all;
+}
+.bg img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+@keyframes anima{
+    0%{
+     opacity: .6;
+     transform: scale(1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+#contact .section-titre{
+    font-size: 4rem;
+    font-weight: 300;
+    color:black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#contact .section-titre span{
+    color: yellowgreen;
+}
+#contact .contact{
+    width: 100%;
+}
+#contact .section-soustitre{
+    text-align: center;
+}
+#contact .contact-items{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+#contact .contact-item{
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    transition: .3s ease box-shadow;
+}
+#contact .contact-item:hover{
+    box-shadow: 0px 0px 5px 0 #0000002c;
+}
+#contact .icon{
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#contat .contact-info{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#contact .contact-info h2{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+#footer{
+    background-image: linear-gradient(60deg, black,#485563 100%);
+    text-align: center;
+    
+}
+#footer .footer{
+    min-height: 300px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.brand h1{
+    color: rgba(255, 255, 0, 0.37);
+}
+.brand h1 span{
+    color: yellow;
+}
+#footer h2{
+
+    color:white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+    text-align: center;
+    justify-content: center;
+}
+#footer .social-item{
+    
+    margin: 0 0;
+}
+#footer .social-item img{
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+#footer .social-item:hover img{
+filter: grayscale(0);
+}
+
+@media (max-width:900px){
+    body{
+        overflow-x: hidden;
+    }
+    #contact .contact-items{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h4{
+        flex-direction: column;
+    }
+    h4 span{
+        margin-bottom: 20px;
+    }
+
+}
+
+
